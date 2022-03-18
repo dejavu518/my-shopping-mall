@@ -1,24 +1,22 @@
 
 <template>
-  <div :style="{color:'red'}">
-    <cpn :aaa="bbb" @click="ccc"></cpn>
+  <div id="app">
+    <demo></demo>
+    <test></test>
   </div>
 </template>
 
 <script>
-import Cpn from "@/views/Cpn";
+import demo from "@/views/demo";
+import test from "@/views/test"
 export default {
-  components: { Cpn },
+  components: { demo, test },
   data() {
     return {
-      selected: [],
-      bbb: '哈哈哈'
+
     }
   },
   methods: {
-    ccc(m) {
-      this.bbb = m
-    }
   }
 }
 </script>
