@@ -1,24 +1,23 @@
-
 <template>
-  <div id="app">
-    <demo></demo>
-    <test></test>
+  <div id="app" class="wrapper">
+    <keep-alive exclude="Detail">
+      <router-view/>
+    </keep-alive>
+    <main-tab-bar/>
   </div>
 </template>
 
 <script>
-import demo from "@/views/demo";
-import test from "@/views/test"
-export default {
-  components: { demo, test },
-  data() {
-    return {
+  import MainTabBar from 'components/content/mainTabbar/MainTabBar'
 
+  export default {
+    name: 'app',
+    components: {
+      MainTabBar
     }
-  },
-  methods: {
   }
-}
 </script>
+
 <style>
+  @import "assets/css/base.css";
 </style>
