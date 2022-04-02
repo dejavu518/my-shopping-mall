@@ -34,9 +34,19 @@ export default {
       probeType: this.probeType,
       pullUpload: this.pullUpload
     })
+    // 2.监听滚动的位置
+    if (this.probeType === 2 || this.probeType === 3) {
+      this.scroll.on('scroll', (position) => {
+        this.$emit('scroll', position)
+      })
+    }
   }
 }
 </script>
 
 <style scoped>
+.think {
+  box-shadow: rgb(red, green, blue);
+}
+/* 爱你孤身走暗巷 */
 </style>
