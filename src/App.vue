@@ -1,26 +1,17 @@
-
 <template>
-  <div :style="{color:'red'}">
-    <cpn :aaa="bbb" @click="ccc"></cpn>
+  <div id="app">
+    <tab-bar></tab-bar>
   </div>
 </template>
 
 <script>
-import Cpn from "@/views/Cpn";
+import TabBar from "./components/tabbar/TabBar.vue";
 export default {
-  components: { Cpn },
-  data() {
-    return {
-      selected: [],
-      bbb: '哈哈哈'
-    }
-  },
-  methods: {
-    ccc(m) {
-      this.bbb = m
-    }
-  }
-}
+  name: "App",
+  components: { TabBar },
+};
 </script>
+
 <style>
+@import "./assets/css/base.css";
 </style>
