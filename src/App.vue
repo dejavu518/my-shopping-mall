@@ -1,17 +1,24 @@
 <template>
-  <div id="app">
-    <tab-bar></tab-bar>
+  <!-- 最大的App组件 -->
+  <div id="app" class="wrapper">
+    <keep-alive exclude="Detail">
+      <router-view />
+    </keep-alive>
+    <main-tab-bar />
   </div>
 </template>
 
 <script>
-import TabBar from "./components/tabbar/TabBar.vue";
+import MainTabBar from "components/content/mainTabbar/MainTabBar";
+
 export default {
-  name: "App",
-  components: { TabBar },
+  name: "app",
+  components: {
+    MainTabBar,
+  },
 };
 </script>
 
 <style>
-@import "./assets/css/base.css";
+@import "assets/css/base.css";
 </style>
